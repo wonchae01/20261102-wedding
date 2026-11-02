@@ -1,0 +1,150 @@
+/* 기본 색상과 공통 설정 */
+:root {
+  --paper: #f8f4ef;
+  --ink: #3f3a36;
+  --muted: #91877e;
+  --line: #d8cec4;
+  --accent: #dba99a;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #eee8e1;
+  color: var(--ink);
+  font-family: 'Gowun Batang', serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.invitation {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 0 45px rgba(76, 58, 42, .08);
+}
+.top-nav {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: clamp(13px, 4vw, 25px);
+  width: min(100%, 520px);
+  padding: 22px 22px;
+  font: 9px 'Gowun Dodum', sans-serif;
+  letter-spacing: 1.1px;
+  color: #6f675f;
+}
+.top-nav a { transition: opacity .2s; }
+.top-nav a:hover { opacity: .55; }
+.heart { margin-left: auto; font-size: 18px; }
+.hero { background: #f7eee8; }
+.hero-copy {
+  min-height: 270px;
+  padding: 85px 18px 24px;
+  text-align: center;
+  background: linear-gradient(180deg, #f7eee8 0%, #f8f2ed 100%);
+}
+.eyebrow {
+  margin: 0 0 12px;
+  color: #9c8d80;
+  font: 10px 'Gowun Dodum', sans-serif;
+  letter-spacing: 2px;
+}
+.hero h1 { margin: 22px 0 14px; font-size: clamp(23px, 6vw, 29px); font-weight: 400; letter-spacing: 5px; }
+.hero h1 span { color: var(--accent); font-size: 17px; padding: 0 5px; }
+.lead { color: #8e8178; font-size: 13px; line-height: 1.9; }
+.date { margin: 17px 0 4px; letter-spacing: 3px; font-size: 14px; }
+.date small { font: 9px 'Gowun Dodum', sans-serif; color: var(--muted); }
+.down-mark { color: #b8aaa0; }
+.hero-image { display: block; width: 100%; height: 390px; object-fit: cover; object-position: center; }
+.section-pad { padding: 54px 30px; position: relative; }
+.intro { min-height: 250px; padding-top: 54px; }
+.script-title { font-family: 'Gowun Batang', serif; font-style: italic; font-size: 39px; line-height: 1.25; margin: 0 0 20px; }
+.body-copy, .muted { color: #8c8178; font-size: 12px; line-height: 2; }
+.leaf-decoration { position: absolute; right: 28px; top: 68px; color: #a9b19b; font-size: 70px; transform: rotate(-25deg); opacity: .65; }
+.section-heading { text-align: center; margin-bottom: 24px; }
+.section-heading h2, .wedding-info h2, .location h2, .account h2 { font-size: 25px; font-weight: 400; margin: 0 0 10px; letter-spacing: 1px; }
+.section-heading .muted { margin: 0; }
+.story { padding-top: 32px; }
+.story-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.story-photos img { width: 100%; height: 185px; object-fit: cover; }
+.timeline { display: flex; justify-content: space-between; gap: 8px; margin: 18px 0 30px; }
+.timeline div { display: flex; flex-direction: column; gap: 6px; font-size: 10px; color: #8e847c; }
+.timeline b { font-weight: 400; letter-spacing: 1px; color: #625a53; font-size: 12px; }
+.together { text-align: right; font-size: 35px; font-style: italic; line-height: 1.15; color: #a8957d; margin: 20px 5px 0; }
+.gallery { padding-top: 38px; }
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.gallery-grid img { width: 100%; height: 145px; object-fit: cover; cursor: zoom-in; }
+.gallery-grid .wide { grid-column: 1 / -1; height: 230px; }
+.gallery-hint { text-align: center; color: #a59a91; font: 10px 'Gowun Dodum', sans-serif; margin: 15px 0 0; }
+.photo-open { cursor: zoom-in; }
+.quote-section { text-align: center; padding: 42px 25px 55px; color: #8a8077; }
+.quote-mark { font-size: 36px; color: #b7a998; }
+.quote-section p { font-size: 14px; line-height: 2; margin: 8px 0 15px; }
+.small-leaf { font-size: 35px; color: #a5ad98; }
+.wedding-info { text-align: center; padding-top: 35px; }
+.wedding-info h2 { margin-bottom: 20px; }
+.thin-rule { width: 30px; height: 1px; background: #cfc4ba; margin: 0 auto 28px; }
+.info-row { display: flex; text-align: left; gap: 16px; margin: 22px 8px; align-items: flex-start; }
+.info-icon { font: 25px 'Gowun Dodum', sans-serif; color: #756b63; width: 25px; text-align: center; }
+.info-row b { font-size: 12px; font-weight: 400; }
+.info-row p { color: #81776f; font-size: 12px; line-height: 1.8; margin: 5px 0 0; }
+.venue-image { display: block; width: 100%; height: 205px; object-fit: cover; margin-top: 25px; }
+.location { text-align: center; padding-top: 38px; }
+.location h2 { margin-bottom: 20px; }
+.map-card { display: block; }
+.map-art {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #e8e8e2;
+  background-image: linear-gradient(28deg, transparent 47%, #fff 48%, #fff 50%, transparent 51%), linear-gradient(100deg, transparent 35%, #fff 36%, #fff 38%, transparent 39%), linear-gradient(155deg, transparent 68%, #e8d9b6 69%, #e8d9b6 71%, transparent 72%);
+  background-size: 110px 90px, 130px 120px, 180px 100px;
+  color: #615b54;
+}
+.map-pin { color: #c95c4d; font-size: 31px; text-shadow: 0 2px 3px #aaa; }
+.map-art b { font-size: 12px; background: rgba(255,255,255,.75); padding: 5px 10px; }
+.map-art small { font: 8px 'Gowun Dodum', sans-serif; letter-spacing: 2px; color: #8c877e; }
+.address { font-size: 11px; color: #8a8077; margin: 15px 0 20px; }
+.outline-button { display: inline-block; border: 1px solid #bdb2a8; padding: 11px 22px; font-size: 11px; min-width: 190px; }
+.outline-button span { margin-left: 12px; }
+.account { text-align: center; padding-top: 25px; }
+.account .muted { margin-bottom: 22px; }
+.account-card { display: grid; grid-template-columns: 35px 52px 1fr 42px; align-items: center; gap: 7px; padding: 14px 10px; margin: 8px 0; background: #f1ece7; text-align: left; font-size: 10px; }
+.account-card > span { color: #8d837b; }
+.account-card b { font-weight: 400; }
+.account-card p { margin: 0; line-height: 1.6; color: #746b64; font-size: 10px; }
+.account-card small { color: #a59b92; }
+.copy-button { background: transparent; border: 1px solid #b9aea4; padding: 6px 4px; font-size: 10px; cursor: pointer; }
+.closing { position: relative; margin-top: 10px; }
+.closing-image { display: block; width: 100%; height: 360px; object-fit: cover; object-position: center; }
+.closing-copy { position: absolute; inset: 0 0 auto; padding: 28px 25px; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+.closing-copy .script-title { font-size: 29px; }
+.closing-copy span { font-size: 10px; }
+footer { padding: 18px; text-align: center; color: #a59a91; font: 9px 'Gowun Dodum', sans-serif; letter-spacing: 2px; }
+dialog { border: 0; padding: 0; }
+dialog::backdrop { background: rgba(35, 30, 27, .72); }
+.photo-modal { width: min(92vw, 680px); max-width: none; max-height: 90vh; background: transparent; overflow: visible; }
+.photo-modal img { display: block; max-width: 100%; max-height: 84vh; margin: auto; object-fit: contain; }
+.modal-close { position: absolute; right: 0; top: -42px; color: white; background: transparent; border: 0; font-size: 34px; cursor: pointer; }
+.copy-modal { width: min(86vw, 340px); padding: 32px 24px 24px; text-align: center; background: var(--paper); color: var(--ink); }
+.copy-modal h3 { font-weight: 400; font-size: 19px; margin: 8px 0; }
+.copy-modal p:not(.eyebrow) { color: #8c8178; font-size: 12px; }
+.modal-confirm { margin-top: 15px; padding: 9px 35px; background: transparent; border: 1px solid #bdb2a8; cursor: pointer; }
+@media (min-width: 700px) {
+  body { padding: 28px 0; }
+  .invitation { border-radius: 18px; }
+  .top-nav { border-radius: 18px 18px 0 0; }
+}
+@media (max-width: 360px) {
+  .section-pad { padding-left: 22px; padding-right: 22px; }
+  .top-nav { gap: 12px; padding-left: 16px; padding-right: 16px; }
+  .account-card { grid-template-columns: 30px 45px 1fr 38px; gap: 4px; }
+}
